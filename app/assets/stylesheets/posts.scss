@@ -15,18 +15,24 @@ body {
     font-size:50px;
     color:white;
     font-weight:900;
-    height:400px;
-    background-image:url("https://www.gregdutoit.com/i/ForestLion_ForestHorizontal_Thumbnail.jpg");
+    height:200px;
+    background-image:url("https://d3jkudlc7u70kh.cloudfront.net/lion-facts.jpg");
     background-repeat:no-repeat;
     margin: 0px auto;
-    width:700px;
+    width:800px;
 }
 .subm {
+    background-image:url("http://audaciouscreative.co.uk/wp-content/uploads/2016/01/Lion.jpg");
+    background-repeat:no-repeat;
+    background-size:600px 450px;
     width:600px;
     border: solid 5px ;
     margin: 0px auto;
     text-align:center;
-    padding:20px;
+    padding:10px;
+    color:#1E0000;
+    font-size:20px;
+    font-weight:900;
     
     
 }
@@ -48,6 +54,7 @@ body {
 textarea#post_body {
     resize:none;
     width:380px;
+    
 }
 input#post_title {
     width:380px;
@@ -56,3 +63,21 @@ input#post_title {
 #minilion {
     width:30px;
 }
+
+.comm {
+    padding:5px;
+    margin: 0px auto;
+    border:1px solid #A56100;
+    width:500px;
+}
+
+#lii {
+    text-align:center;
+    font-size:15px;
+    font-weight:900;
+}
+
+#qwe {
+    width:470px;
+}
+

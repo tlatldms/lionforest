@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
     
     root 'posts#index'
-    
+    post '/comment' => 'posts#comment'
     # get 'posts/index'
     
     get '/main' => 'posts#index'

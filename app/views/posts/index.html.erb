@@ -1,17 +1,19 @@
+<br>
 <div id="lionbox">
-<!--<img id="lion" src=https://www.gregdutoit.com/i/ForestLion_ForestHorizontal_Thumbnail.jpg>-->
-<br>숲속의 사자처럼
+숲속의 사자처럼
 </div>
-<br><br><br>
+<br>
 <div class="subm">
 <%=form_for @post do |f| %>
-  <%= f.label :카테고리 %><br>
+  <%= f.label :▼카테고리▼%><br>
   <%= f.text_field :title, size:50 %><br>
-  <%= f.label :내용 %><br>
+  <%= f.label :▼내용▼%><br>
   <%= f.text_area :body, rows:6, width:50 %><br>
-  <%= f.label :작성자 %><br>
+  <%= f.label :▼작성자▼%><br>
   <%= f.text_field :username %><br><br>
   <%=f.submit '등록' %>
+  
+
   <% end %>
 </div>
 
@@ -25,9 +27,26 @@
       <br> <%= p.body %><br><br>
       작성자: <%= p.username %><br>
       작성 시간: <%= p.created_at %>
+      
       <!--<a href="/destroy/<%= p.id %>">[삭제]</a><br>-->
+   <br> <br> 
+       
+  <%=form_tag '/comment' do %>
+    <input type="hidden" name="post_id" value="<%=p.id%>">
+    <input id=qwe type="text" name="content">
+    <button type="submit">댓글 입력</button><br>
+    <%end%> 
+    
+   
+    <h1 id=lii>댓글 목록</h1>
+    <div class=comm>
+      <% p.comments.each do |c| %>
+      ▶<%=c.content %><br>
+      
+      <%end%>
+      </div>
+     
     </div>
     <br>
   <% end %>
 </div>
-
