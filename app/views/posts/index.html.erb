@@ -1,0 +1,33 @@
+<div id="lionbox">
+<!--<img id="lion" src=https://www.gregdutoit.com/i/ForestLion_ForestHorizontal_Thumbnail.jpg>-->
+<br>숲속의 사자처럼
+</div>
+<br><br><br>
+<div class="subm">
+<%=form_for @post do |f| %>
+  <%= f.label :카테고리 %><br>
+  <%= f.text_field :title, size:50 %><br>
+  <%= f.label :내용 %><br>
+  <%= f.text_area :body, rows:6, width:50 %><br>
+  <%= f.label :작성자 %><br>
+  <%= f.text_field :username %><br><br>
+  <%=f.submit '등록' %>
+  <% end %>
+</div>
+
+<br><br>
+<div class="out">
+  <% @posts.each do |p| %>
+    <div class="in">
+      <img id=minilion src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAUuAAAAJDVmNDBiNDI3LTRkMWQtNDU2MS05MmU4LWQ0ZTMyNWY5Y2NmYg.png">
+      #<%= p.id %>번째 울림<br>
+      <카테고리 : <%= p.title %>><br>
+      <br> <%= p.body %><br><br>
+      작성자: <%= p.username %><br>
+      작성 시간: <%= p.created_at %>
+      <!--<a href="/destroy/<%= p.id %>">[삭제]</a><br>-->
+    </div>
+    <br>
+  <% end %>
+</div>
+

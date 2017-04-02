@@ -1,0 +1,58 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('//cdn.jsdelivr.net/font-iropke-batang/1.1/font-iropke-batang.css');
+
+body {
+    font-family: 'Iropke Batang', serif;
+    font-weight:700;
+    background-color:#FFFFC6;
+    color:#1E0000;
+}
+
+#lionbox {
+    text-align:center;
+    font-size:50px;
+    color:white;
+    font-weight:900;
+    height:400px;
+    background-image:url("https://www.gregdutoit.com/i/ForestLion_ForestHorizontal_Thumbnail.jpg");
+    background-repeat:no-repeat;
+    margin: 0px auto;
+    width:700px;
+}
+.subm {
+    width:600px;
+    border: solid 5px ;
+    margin: 0px auto;
+    text-align:center;
+    padding:20px;
+    
+    
+}
+
+.in {
+    padding:20px;
+    width:600px;
+    overflow:none;
+    margin: 0px auto;
+    border: solid 5px #A56100;
+}
+
+#lion {
+    margin:0px auto;
+    width:500px;
+
+}
+
+textarea#post_body {
+    resize:none;
+    width:380px;
+}
+input#post_title {
+    width:380px;
+}
+
+#minilion {
+    width:30px;
+}
