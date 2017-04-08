@@ -6,7 +6,7 @@
 body {
     font-family: 'Iropke Batang', serif;
     font-weight:700;
-    background-color:#FFFFC6;
+    background-color:#FFFFE6;
     color:#1E0000;
 }
 
@@ -24,7 +24,7 @@ body {
 .subm {
     background-image:url("http://audaciouscreative.co.uk/wp-content/uploads/2016/01/Lion.jpg");
     background-repeat:no-repeat;
-    background-size:600px 450px;
+    background-size:600px 465px;
     width:600px;
     border: solid 5px ;
     margin: 0px auto;
@@ -42,7 +42,7 @@ body {
     width:600px;
     overflow:none;
     margin: 0px auto;
-    border: solid 5px #A56100;
+    border: solid 7px #A56100;
 }
 
 #lion {
@@ -61,11 +61,14 @@ input#post_title {
 }
 
 #minilion {
-    width:30px;
+    width:24px;
 }
 
+#asd {
+    font-size:18px;
+}
 .comm {
-    padding:5px;
+    padding:10px;
     margin: 0px auto;
     border:1px solid #A56100;
     width:500px;
@@ -78,6 +81,18 @@ input#post_title {
 }
 
 #qwe {
-    width:470px;
+    width:450px;
 }
 
+.minn {
+    font-size:12px;
+}
+
+#dess {
+    color:gray;
+}
+
+select#post_category_id {
+    width:150px;
+    text-align:center;
+}

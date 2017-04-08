@@ -1,0 +1,15 @@
+<br><br>
+<h1 style=text-align:center;>수정하기</h1>
+<br>
+
+<div class="subm">
+<%=form_for @post do |f| %>
+  <%= f.label :▼제목▼%><br>
+  <%= f.text_field :title, size:50 %><br>
+  <%= f.label :▼내용▼%><br>
+  <%= f.text_area :body, rows:6, width:50 %><br>
+  <%= f.label :▼작성자▼%><br>
+  <%= f.text_field :username %><br><br>
+  <%=f.submit '등록' %>
+  <% end %>
+</div>

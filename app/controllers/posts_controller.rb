@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.all.reverse
+    @categories = Category.all
+   
   end
 
   def new
+    @categories = Category.all
     @post = Post.new
     @posts = Post.all
   end
@@ -21,16 +24,32 @@ class PostsController < ApplicationController
     redirect_to :back
   end
   
-  def destroy
-     @one_post = Post.find(params[:post_id])
-     @one_post.destroy
-     redirect_to ''
+  def show
+    @post = Post.find(params[:id])
   end
   
+  def destroy
+     @post = Post.find(params[:id])
+     @post.delete
+     
+     redirect_to posts_path
+  end
+  
+  def edit
+    @categories=Category.all
+    @post = Post.find(params[:id])
+  end
+  
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+  
+    redirect_to posts_path
+  end
   
   private
   def post_params
-    params.require(:post).permit(:body, :title, :username)
+    params.require(:post).permit(:category_id, :body, :title, :username)
   end
   # def comment_params
   #   params.require(:comment).permit(:post_id, :content)
