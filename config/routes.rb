@@ -13,7 +13,7 @@ Rails.application.routes.draw do
  patch  '/posts/:id'   =>   'posts#update'
   delete '/posts/:id'   =>   'posts#destroy'
   
-  
+    root 'posts#index'
 
     # get 'update_view/:post_id'=> 'posts#update_view'
     # post 'update/:post_id'=> 'posts#update'
