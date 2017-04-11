@@ -6,7 +6,10 @@ puts "Inserting..."
     ["통학"],
     ["고민"],
     ["봄"],
-    ["벚꽃"]
+    ["벚꽃"],
+    ["노래"],
+    ["코딩"],
+    ["인생"]
     ].each do |x| 
         Category.create(name: x[0])
     end
