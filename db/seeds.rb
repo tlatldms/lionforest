@@ -2,7 +2,11 @@ puts "Inserting..."
 [
     ["사랑"],
     ["치킨"],
-    ["피자"]
+    ["피자"],
+    ["통학"],
+    ["고민"],
+    ["봄"],
+    ["벚꽃"]
     ].each do |x| 
         Category.create(name: x[0])
     end

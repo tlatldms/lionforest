@@ -29,8 +29,8 @@
       <div class=minn>작성자: <%= p.username %><br>
       작성 시간: <%= p.created_at %></div>
     <% p %>
-    <%= link_to '수정하기', edit_post_path(p) %> |
-    <%= link_to '삭제하기', post_path(p), method: :delete, data: {confirm:'정말 삭제하시겠습니까?'} %>
+    <%= link_to '수정하기', edit_post_path(p.id) %> |
+    <%= link_to '삭제하기', post_path(p.id), method: :delete, data: {confirm:'정말 삭제하시겠습니까?'} %>
       <!--<a id=dess href="/destroy/<%= p.id %>">[삭제]</a><br>-->
     <br> <br> 
        
