@@ -1,19 +1,32 @@
 Rails.application.routes.draw do
+    get 'posts/searchindex', :as=> :posts_searchindex
+    resources 'posts' do
+        resources 'comments', only: [:create]
+    end
     
-    
-    post '/comment' => 'posts#comment'
-    # get 'posts/index'
-    
-    get    '/posts'  => 'posts#index'
-  post  '/posts' =>   'posts#create'
-  get    '/posts/new' =>  'posts#new', as: 'new_post'
-  get    '/posts/:id'   =>   'posts#show', as: 'post'
-  get    '/posts/:id/edit' => 'posts#edit', as: 'edit_post'
-
- patch  '/posts/:id'   =>   'posts#update'
-  delete '/posts/:id'   =>   'posts#destroy'
-  
     root 'posts#index'
+    
+
+    
+    
+    
+    
+#     post '/comment' => 'posts#comment'
+#     # get 'posts/index'
+    
+#     get    '/posts'  => 'posts#index'
+#   post  '/posts' =>   'posts#create'
+#   get    '/posts/new' =>  'posts#new', as: 'new_post'
+#   get    '/posts/:id'   =>   'posts#show', as: 'post'
+#   get    '/posts/:id/edit' => 'posts#edit', as: 'edit_post'
+
+#  patch  '/posts/:id'   =>   'posts#update'
+#   delete '/posts/:id'   =>   'posts#destroy'
+  
+#     root 'posts#index'
+
+
+
 
     # get 'update_view/:post_id'=> 'posts#update_view'
     # post 'update/:post_id'=> 'posts#update'

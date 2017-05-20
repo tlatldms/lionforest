@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('//cdn.jsdelivr.net/font-iropke-batang/1.1/font-iropke-batang.css');
 
+
+
 body {
     font-family: 'Iropke Batang', serif;
     font-weight:700;
@@ -101,4 +103,31 @@ select#post_category_id {
     text-align:center;
     font-size:30px;
     font-weight:900;
+}
+
+textarea#comment_content {
+    width:450px;
+}
+
+.commm {
+    text-align:center;
+    border:1px solid #A56100;
+    width:400px;
+    margin:0px auto;
+}
+
+.search {
+    margin-left: 500px;
+    width: 350px;
+}
+
+input#search {
+    width:250px;
+}
+
+.segoho {
+    margin-left: 100px;
+    font-size:20px;
+    font-weight:900;
+    color:black;
 }

@@ -1,9 +1,16 @@
 class PostsController < ApplicationController
+  def searchindex
+    @posts= Post.search(params[:search]).reverse
+    @post = Post.new
+    @categories = Category.all
+    @comment=Comment.new
+  end
+  
   def index
     @post = Post.new
     @posts = Post.all.reverse
     @categories = Category.all
-   
+    @comment=Comment.new
   end
 
   def new
@@ -12,11 +19,11 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   
-  def comment
-    # comment = Comment.new(comment_params)
-    Comment.create(post_id: params[:post_id], content: params[:content])
-    redirect_to :back
-  end
+  # def comment
+  #   # comment = Comment.new(comment_params)
+  #   Comment.create(post_id: params[:post_id], content: params[:content])
+  #   redirect_to :back
+  # end
   def create
     post = Post.new(post_params)
     post.save

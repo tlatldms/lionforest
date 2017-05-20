@@ -1,35 +1,22 @@
+
+<br>
 <br>
 <div id="lionbox">
 숲속의 사자처럼
 </div>
-<br>
+<br><br>
 
+<div class=segoho>
+<%= link_to '홈으로 돌아가기', posts_path %>
+</div>
 <div class="search">
 <%= form_tag posts_searchindex_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search], placeholder:"제목/내용/작성자" %>
+      <%= text_field_tag :search, params[:search],placeholder:"제목/내용/작성자" %>
       <%= submit_tag "Search", :name => nil %>
 <% end %>
 </div>
-
 <br>
 
-
-
-
-<div class="subm">
-<%=form_for @post do |f| %>
-  Category : <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name") %><br>
-  <%= f.label :▼제목▼%><br>
-  <%= f.text_field :title, size:50 %><br>
-  <%= f.label :▼내용▼%><br>
-  <%= f.text_area :body, rows:6, width:50 %><br>
-  <%= f.label :▼작성자▼%><br>
-  <%= f.text_field :username %><br><br>
-  <%=f.submit '등록' %>
-  <% end %>
-</div>
-
-<br><br>
 <div class="out">
    
   <% @posts.each do |p| %>
@@ -47,7 +34,7 @@
       <!--<a id=dess href="/destroy/<%= p.id %>">[삭제]</a><br>-->
     <br> <br> <br>
     
- 
+    
     <% if p.comments.count>0 %>
     <h5 style=text-align:center;>#<%= p.id %>번째 울림의 댓글 목록</h5>
     <div class=commm>
@@ -68,5 +55,7 @@
       </div>
      
     </div>
-    <br>
+        <br>
   <% end %>
+
+
